@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup - TekWik</title>
+    <link rel="icon" href="../../TekWik/icon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #283845;
+            color: #F2D492;
+            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 3rem auto;
+            background: #606c38;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #bc6c25;
+            margin-bottom: 1rem;
+        }
+        .ambient {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .video-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        label, legend {
+            font-weight: 500;
+            color: #F2D492;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin: 0.5rem 0 1rem 0;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            background: #283845;
+            color: #F2D492;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        fieldset {
+            border: 2px solid #bc6c25;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        legend {
+            color: #bc6c25;
+            font-size: 1.2rem;
+        }
+        .submit-btn {
+            background: #bc6c25;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 0.7rem 2rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: #d3cda5;
+            color: #283845;
+        }
+        .footer {
+            text-align: center;
+            color: #d3cda5;
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ambient">
+            <span>Click here for ambient music!</span>
+            <audio src="../../TekWik/TechMusic.mp3" controls autoplay loop>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <h1>Join the TekWik Community!</h1>
+        <div class="video-box">
+            <video width="320" height="180" autoplay muted loop style="border-radius:12px;">
+                <source src="../../TekWik/JeryyTheCoder_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <form>
+            <fieldset>
+                <legend>Sign Up Form</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$">
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your phone number" pattern="^\\d{10}$" required>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="3" placeholder="Tell us a bit about yourself..."></textarea>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="Australia">Australia</option>
+                    <option value="India">India</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="other_country">Enter country (if other):</label>
+                <input type="text" id="other_country" name="other_country" placeholder="Enter country name:">
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I want monthly updates about TekWik's latest features!</label><br>
+
+                <button type="submit" class="submit-btn" onclick="alert('Your application will be processed'); window.open('TekWik.html');">Sign up!</button>
+            </fieldset>
+        </form>
+        <div class="footer">
+            &copy; 2025 TekWik. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
