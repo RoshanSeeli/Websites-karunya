@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>TekWik!</title>
     <link rel="icon" href="../../TekWik/icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -15,17 +16,16 @@
         a {
             color: #F2D492;
             text-decoration: none;
-            transition: color 0.2s;
         }
         a:hover {
             color: #bc6c25;
+            text-decoration: underline;
         }
         .news-header {
             background: #606c38;
             border-radius: 0 0 20px 20px;
             padding: 2rem 0 1rem 0;
             text-align: center;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
         .news-header img {
             vertical-align: middle;
@@ -33,10 +33,8 @@
             margin-right: 1rem;
         }
         .ambient {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            justify-content: center;
+            display: block;
+            text-align: center;
             margin-bottom: 1rem;
         }
         .main-layout {
@@ -54,7 +52,6 @@
             border-radius: 20px;
             padding: 1.5rem;
             color: #fff;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
             min-width: 250px;
         }
         .headline-list {
@@ -71,13 +68,13 @@
         .featured {
             margin-bottom: 2rem;
             background: #606c38;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            border-radius: 16px;
             padding: 1.5rem;
             color: #fff;
+            text-align: left;
         }
         .featured video, .featured img {
-            border-radius: 12px;
+            border-radius: 8px;
             width: 100%;
             max-width: 500px;
             height: auto;
@@ -117,16 +114,15 @@
         .feedback-section {
             margin-top: 2rem;
             background: #606c38;
-            border-radius: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 16px;
             padding: 1.5rem;
             color: #fff;
             text-align: center;
         }
         .feedback-section textarea {
             width: 90%;
-            border-radius: 10px;
-            border: none;
+            border-radius: 8px;
+            border: 1px solid #bc6c25;
             padding: 1rem;
             font-size: 1rem;
             margin-bottom: 1rem;
@@ -134,17 +130,18 @@
         .feedback-section input[type="submit"], .submit-button {
             background: #bc6c25;
             color: #fff;
-            border: none;
-            border-radius: 10px;
+            border-radius: 8px;
+            border: 1px solid #bc6c25;
             padding: 0.7rem 2rem;
             font-size: 1rem;
             margin: 0.5rem;
             cursor: pointer;
-            transition: background 0.2s;
+            text-decoration: none;
         }
         .feedback-section input[type="submit"]:hover, .submit-button:hover {
             background: #d3cda5;
             color: #283845;
+            text-decoration: underline;
         }
         .footer {
             background: #283845;
@@ -152,20 +149,13 @@
             text-align: center;
             padding: 2rem 0 1rem 0;
             font-size: 1rem;
-        }
-        @media (max-width: 900px) {
-            .main-layout {
-                flex-direction: column-reverse;
-            }
-            .sidebar {
-                min-width: 0;
-            }
+            border-radius: 0 0 16px 16px;
         }
     </style>
 </head>
 <body>
     <div class="news-header">
-        <img src="../../TekWik/logo.png" alt="TW" />
+        <img src="../../TekWik/logo.png" alt="TW">
         <h1 style="display:inline;">TekWik <span style="font-size:1rem;">Do what matters!</span></h1>
         <div class="ambient" style="margin-top:1rem;">
             <span>Click here for ambient music!</span>
@@ -179,7 +169,7 @@
     <div class="main-layout">
         <div class="main-content">
             <div class="featured">
-                <video src="../../TekWik/cooking.mp4" autoplay muted loop>
+                <video autoplay muted loop>
                     <source src="../../TekWik/cooking.mp4" type="video/mp4">
                 </video>
                 <h3>Grandma’s Kitchen Website 3.0!</h3>
@@ -187,7 +177,7 @@
 
                 </h4>
                     
-                     <a target="_blank" href="../Website-1/Kitchen.html">Visit now</a></p>
+                   <p><a target="_blank" href="../Website-1/Kitchen.html">Visit now</a></p>
             </div>
 
             <div class="featured">
@@ -203,17 +193,17 @@
                  <img src="../../TekWik/woodwork.png" alt="wood" width="250"> 
             
             <h3>Grandma’s Kitchen Website 2.0</h3>
-                <p><h4>Slow Ventures cuts first check from $60M creator fund into woodworking founder.</h4></a>
-                <a target="_blank" href="https://techcrunch.com/2025/08/11/slow-ventures-cuts-first-check-from-60m-creator-fund-into-woodworking-founder/">
+                <h4>Slow Ventures cuts first check from $60M creator fund into woodworking founder.</h4>
+                <p><a target="_blank" href="https://techcrunch.com/2025/08/11/slow-ventures-cuts-first-check-from-60m-creator-fund-into-woodworking-founder/">
                     Visit now</a></p>
             </div>
 
            
             <div class="news-section">
                 <div class="news-article">
-                     <video src="../../TekWik/cooking.mp4" width="90" height="auto" autoplay muted loop>
+                     <video width="90" height="240" autoplay muted loop>
                         <source src="../../TekWik/cooking.mp4" type="video/mp4">
-                        <font face="Cascadia Code">Your browser does not support the video tag.</font>
+                        Your browser does not support the video tag.
                     </video>
                     
                     <h4>Crafted with sleek design and cutting-edge web technology, Grandma’s Kitchen now serves classic recipes in a vibrant, interactive, and user-friendly experience!</h4>
@@ -222,7 +212,7 @@
             </div>
                 
             <div class="news-article">
-                    <img src="../../TekWik/pixel.png" alt="Tech News" />
+                    <img src="../../TekWik/pixel.png" alt="Tech News">
                     <h4>Pixel 10, AI capabilities, and everything else we expect out of the Made by Google 2025 event
                         </h4>
                     <div class="meta">Aisha Malik · 9:44 AM PDT · August 12, 2025</div>
@@ -232,35 +222,35 @@
             </div>
 
             <div class="news-article">
-              <img src="../../TekWik/claude.png" alt="claude" />
+              <img src="../../TekWik/claude.png" alt="claude">
              <h4>Anthropic’s Claude AI model can now handle longer prompts</h4>
              <div class="meta">Aisha Malik · 9:44 AM PDT · August 12, 2025</div>
             <a target="_blank" href="https://techcrunch.com/2025/08/12/anthropics-claude-ai-model-can-now-handle-longer-prompts/">Read more</a>
             </div>
 
             <div class="news-article">
-                <img src="../../TekWik/edits.png" alt="edits" />
+                <img src="../../TekWik/edits.png" alt="edits">
                 <h4>A guide to using Edits, Meta's CapCut rival for short-form video editing</h4>
                 <div class="meta">Aisha Malik · 9:44 AM PDT · August 12, 2025</div>
                 <a target="_blank" href="https://techcrunch.com/2025/08/12/anthropics-claude-ai-model-can-now-handle-longer-prompts/">Read more</a>
             </div>
 
             <div class="news-article">
-                <img src="../../TekWik/anthropic.png" alt="anthropic" />
+                <img src="../../TekWik/anthropic.png" alt="anthropic">
                 <h4>Anthropic takes aim at OpenAI, offers Claude to ‘all three branches of government’ for $1</h4>
                 <div class="meta">Rebecca Bellan · 9:44 AM PDT · August 12, 2025</div>
                 <a target="_blank" href="https://techcrunch.com/2025/08/12/anthropic-takes-aim-at-openai-offers-claude-to-all-three-branches-of-government-for-1/">Read more</a>
             </div>
 
             <div class="news-article">
-                <img src="../../TekWik/rocket.png" alt="rocket" />
+                <img src="../../TekWik/rocket.png" alt="rocket">
                 <h4>Anduril opens solid rocket motor factory amidst ongoing chemical chokepoint</h4>
                 <div class="meta">Aria Alamalhodaei · 9:44 AM PDT · August 12, 2025</div>
                 <a target="_blank" href="https://techcrunch.com/2025/08/12/anduril-opens-solid-rocket-motor-factory-amidst-ongoing-chemical-chokepoint/">Read more</a>
             </div>
 
             <div class="news-article">
-                <img src="../../TekWik/google.png" alt="google" />
+                <img src="../../TekWik/google.png" alt="google">
                 <h4>Google will now let you pick your top sources for search results</h4>
                 <div class="meta">Ivan Mehta · 9:44 AM PDT · August 12, 2025</div>
                 <a target="_blank" href="https://techcrunch.com/2025/08/12/google-will-now-allow-you-define-your-top-sources-for-search-results/">Read more</a>
@@ -315,7 +305,7 @@
                 <li><a target="_blank" href="https://techcrunch.com/2025/08/06/key-sections-of-the-us-constitution-deleted-from-governments-website/">
                 Key sections of the US Constitution deleted from government’s website
                 </a></li>
-                <li><a target="_blank" href=https://techcrunch.com/2025/08/06/instagram-takes-on-snapchat-with-new-instagram-map/">
+                <li><a target="_blank" href="https://techcrunch.com/2025/08/06/instagram-takes-on-snapchat-with-new-instagram-map/">
                 Instagram takes on Snapchat with new ‘Instagram Map’
                 </a></li>
                 <li><a target="_blank" href="https://techcrunch.com/2025/08/06/google-says-hackers-stole-its-customers-data-in-a-breach-of-its-salesforce-database/">
@@ -340,7 +330,7 @@
             
             <picture>
                 <source srcset="https://techcrunch.com/wp-content/uploads/2025/07/TC25_Disrupt-Color.png" type="image/png">
-                <img src="https://techcrunch.com/wp-content/uploads/2025/07/TC25_Disrupt-Color.png" height="20px" width="auto" alt="No Internet!">
+                <img src="https://techcrunch.com/wp-content/uploads/2025/07/TC25_Disrupt-Color.png" height="20" width="100" alt="No Internet!">
             </picture>
             <h4>October 27-29, 2025 | San Francisco</h4>
             <p>Put your brand in front of 10,000+ tech and VC leaders across all three days of Disrupt 2025. Amplify your reach, spark real connections, and lead the innovation charge. Secure your exhibit space before your competitor does.</p>
