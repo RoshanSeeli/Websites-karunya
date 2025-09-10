@@ -1,159 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Signup - TekWik</title>
-    <link rel="icon" href="../../TekWik/icon.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Signup!</title>
+    <link rel="icon" href="../../TekWik/icon.png">
     <style>
         body {
             background: #283845;
-            color: #F2D492;
-            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            color: #DDA15E;
+            font-family: cursive, Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        .container {
-            max-width: 500px;
-            margin: 3rem auto;
-            background: #606c38;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            padding: 2rem;
-        }
-        h1 {
-            text-align: center;
-            color: #bc6c25;
-            margin-bottom: 1rem;
-        }
         .ambient {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            justify-content: center;
+            display: block;
+            text-align: center;
             margin-bottom: 1rem;
         }
-        .video-box {
-            display: flex;
-            justify-content: center;
+        form {
+            background: #606c38;
+            color: #fff;
+            border-radius: 16px;
+            padding: 2rem 2.5rem 2rem 2.5rem;
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem auto;
+            display: block;
+            text-align: left;
+        }
+        fieldset {
+            border: 1px solid #d3cda5;
+            padding: 1rem;
+            margin: 0;
+            border-radius: 8px;
+        }
+        legend {
+            font-size: 1.2rem;
+            color: #d3cda5;
             margin-bottom: 1rem;
         }
-        label, legend {
-            font-weight: 500;
-            color: #F2D492;
+        label {
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+            display: block;
         }
         input, select, textarea {
-            width: 100%;
-            padding: 0.7rem;
-            margin: 0.5rem 0 1rem 0;
-            border-radius: 10px;
-            border: none;
+            border-radius: 8px;
+            border: 1px solid #bc6c25;
+            padding: 8px;
             font-size: 1rem;
-            background: #283845;
-            color: #F2D492;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
         }
         input[type="radio"], input[type="checkbox"] {
             width: auto;
-            margin-right: 0.5rem;
+            margin-right: 4px;
+            display: inline-block;
         }
-        fieldset {
-            border: 2px solid #bc6c25;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        legend {
-            color: #bc6c25;
-            font-size: 1.2rem;
-        }
-        .submit-btn {
+        input[type="submit"] {
             background: #bc6c25;
             color: #fff;
-            border: none;
-            border-radius: 10px;
-            padding: 0.7rem 2rem;
-            font-size: 1rem;
-            margin-top: 1rem;
+            border-radius: 8px;
+            border: 1px solid #bc6c25;
+            padding: 8px 32px;
+            font-size: 1em;
+            margin-top: 8px;
             cursor: pointer;
-            transition: background 0.2s;
+            text-decoration: none;
         }
-        .submit-btn:hover {
+        input[type="submit"]:hover {
             background: #d3cda5;
             color: #283845;
+            text-decoration: underline;
         }
-        .footer {
-            text-align: center;
-            color: #d3cda5;
-            margin-top: 2rem;
-            font-size: 1rem;
+        video {
+            border-radius: 8px;
+            border: 2px solid #bc6c25;
+            margin-left: 16px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="ambient">
-            <span>Click here for ambient music!</span>
-            <audio src="../../TekWik/TechMusic.mp3" controls autoplay loop>
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <h1>Join the TekWik Community!</h1>
-        <div class="video-box">
-            <video width="320" height="180" autoplay muted loop style="border-radius:12px;">
-                <source src="../../TekWik/JeryyTheCoder_compressed.mp4" type="video/mp4">
+    <div class="ambient">
+    <span>Click here for ambient music! -></span>
+    <audio src="../../TekWik/TechMusic.mp3" controls autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+    
+    <h1 style="text-align: center;">Become a part of TekWik Community today!</h1>
+    <form>
+        <fieldset>
+            <legend>Sign up Form</legend>
+            <div style="float:right;">
+            <video width="320" height="240" autoplay muted loop>
+                <source src="../../Tekwik/JeryyTheCoder_compressed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
-        <form>
-            <fieldset>
-                <legend>Sign Up Form</legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <p>Fill in the details below to create an account:</p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
 
-                <label for="gender">Gender:</label><br>
-                <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label><br><br>
+            <label>Gender:</label><br>
+            <span>Male</span><input type="radio" id="male" name="gender">
+            <span>Female</span><input type="radio" id="female" name="gender"><br><br>
+            
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$">
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required><br><br>
 
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$">
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required><br><br>
+           
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your phone number" pattern="^\d{10}$" required><br><br>   
 
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
+            <label for="bio">Short Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us a bit about yourself..."></textarea><br><br>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your phone number" pattern="^\\d{10}$" required>
+            <label for="country">Country:</label><br>
+            <select name="country" id="country">
+                <option value="" disabled selected>Select your country</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="India">India</option>
+                <option value="Other">Other</option>
+            </select><br><br>
 
-                <label for="bio">Short Bio:</label>
-                <textarea id="bio" name="bio" rows="3" placeholder="Tell us a bit about yourself..."></textarea>
+            <label for="other_country">Enter country (if other):</label><br>
+            <input type="text" id="other_country" name="other_country" placeholder="Enter country name:"><br><br>
 
-                <label for="country">Country:</label>
-                <select id="country" name="country" required>
-                    <option value="" disabled selected>Select your country</option>
-                    <option value="USA">USA</option>
-                    <option value="Canada">Canada</option>
-                    <option value="UK">UK</option>
-                    <option value="Australia">Australia</option>
-                    <option value="India">India</option>
-                    <option value="Other">Other</option>
-                </select>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I would like to receive monthly letter about Grandma's Kitchen's future updates!</label><br><br>
 
-                <label for="other_country">Enter country (if other):</label>
-                <input type="text" id="other_country" name="other_country" placeholder="Enter country name:">
-
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I want monthly updates about TekWik's latest features!</label><br>
-
-                <button type="submit" class="submit-btn" onclick="alert('Your application will be processed'); window.open('TekWik.html');">Sign up!</button>
-            </fieldset>
-        </form>
-        <div class="footer">
-            &copy; 2025 TekWik. All rights reserved.
-        </div>
-    </div>
+            <input type="submit" value="Sign up!" onclick="alert('Your application will be processed'); window.open('TekWik.html');">
+        </fieldset>
+    </form>
 </body>
 </html>
