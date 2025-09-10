@@ -5,156 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grandma's Kitchen!</title>
-    <link rel="icon" href="../../Recipe/kitchen.png"/>
+    <link rel="icon" href="../../Recipe/kitchen.png" >
     <style>
         body {
-            background: #283618;
+            background: #4e2e1e;
             color: #DDA15E;
-            font-family: 'Cursive', sans-serif;
+            font-family: 'Cursive', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
         header {
-            text-align: center;
-            padding: 2rem 0 1rem 0;
+            padding: 32px 0 16px 0;
         }
         .ambient {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 1rem;
+            display: block;
+            margin-bottom: 16px;
         }
         .hero-video {
-            display: flex;
-            justify-content: center;
-            margin: 0 0 2rem 0;
+            display: block;
+            margin: 0 auto 32px auto;
+            width: 400px;
+            height: auto;
         }
         .recipes-list {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 32px;
+            text-align: center;
         }
         .recipes-list a {
             color: #d3cda5;
             background: #606c38;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border: 2px solid #bc6c25;
+            border-radius: 0;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.2s;
+            font-size: 1em;
+            margin: 0 8px;
+            display: inline-block;
         }
         .recipes-list a:hover {
             background: #bc6c25;
+            color: #fff;
+            text-decoration: underline;
         }
         .recipes-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 2rem;
+            display: block;
+            margin-bottom: 32px;
+            text-align: center;
         }
         .recipe-card {
+            display: inline-block;
+            vertical-align: top;
             background: #606c38;
             color: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
             width: 350px;
-            padding: 2rem 1.5rem 1.5rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 16px;
+            padding: 24px 12px 16px 12px;
+            border: 2px solid #bc6c25;
+            text-align: left;
+            border-radius: 12px;
         }
         .recipe-card img {
-            border-radius: 12px;
-            margin-bottom: 1rem;
+            display: block;
+            margin: 0 auto 12px auto;
             width: 200px;
             height: 200px;
             object-fit: cover;
+            border: 2px solid #bc6c25;
+            border-radius: 8px;
         }
         .recipe-card h3 {
             color: #BC6C25;
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            font-style: italic;
         }
         .ingredients-table {
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 12px;
             border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
         }
         .ingredients-table th, .ingredients-table td {
             border: 1px solid #d3cda5;
-            padding: 0.3rem 0.5rem;
+            padding: 4px 8px;
             text-align: left;
+            font-size: 0.95em;
         }
         .ingredients-table th {
             background: #bc6c25;
             color: #fff;
+            font-style: italic;
         }
         .method-list {
-            margin-bottom: 1rem;
+            margin-bottom: 12px;
+            font-size: 1em;
         }
         .recipe-card iframe {
-            border-radius: 12px;
-            margin-top: 1rem;
+            display: block;
+            margin: 12px auto 0 auto;
+            width: 300px;
+            height: 170px;
+            border: 3px solid #bc6c25;
+            border-radius: 8px;
         }
         .back-link {
             color: #d3cda5;
             text-decoration: underline;
-            margin-top: 1rem;
+            margin-top: 8px;
+            display: inline-block;
+            font-size: 0.95em;
         }
         .review-section {
             background: #606c38;
-            border-radius: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 2px solid #bc6c25;
             width: 80%;
-            margin: 2rem auto;
-            padding: 2rem;
+            margin: 32px auto;
+            padding: 32px 0;
             color: #fff;
             text-align: center;
+            border-radius: 16px;
         }
         .review-section textarea {
             width: 90%;
-            border-radius: 10px;
-            border: none;
-            padding: 1rem;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            padding: 12px;
+            font-size: 1em;
+            margin-bottom: 12px;
+            border: 2px solid #bc6c25;
+            border-radius: 8px;
         }
         .review-section input[type="submit"], .review-section button {
             background: #bc6c25;
             color: #fff;
-            border: none;
-            border-radius: 10px;
-            padding: 0.7rem 2rem;
-            font-size: 1rem;
-            margin: 0.5rem;
+            border: 2px solid #bc6c25;
+            padding: 10px 32px;
+            font-size: 1em;
+            margin: 8px;
             cursor: pointer;
-            transition: background 0.2s;
+            text-decoration: none;
+            border-radius: 8px;
         }
         .review-section input[type="submit"]:hover, .review-section button:hover {
             background: #d3cda5;
             color: #283618;
+            text-decoration: underline;
         }
         .footer {
-            background: #283618;
+            background: #4e2e1e;
             color: #d3cda5;
             text-align: center;
-            padding: 2rem 0 1rem 0;
-            font-size: 1rem;
-        }
-        @media (max-width: 900px) {
-            .recipes-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .recipe-card {
-                width: 90vw;
-            }
+            padding: 32px 0 16px 0;
+            font-size: 1em;
+            border-radius: 0 0 16px 16px;
         }
         video {
-            border-radius: 12px;
-            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #bc6c25;
+            border-radius: 8px;
+        }
+        iframe {
+            border: 3px solid #bc6c25;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -183,7 +197,7 @@
     <section class="recipes-container">
         <!-- MOMO CARD -->
         <div class="recipe-card" id="momo">
-            <img src="../../Recipe/momo.jpg" alt="momos" />
+            <img src="../../Recipe/momo.jpg" alt="momos"  >
             <h3>Recipe 1: Momos</h3>
             <table class="ingredients-table">
                 <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
@@ -237,11 +251,11 @@
             </div>
             <a class="back-link" href="#header">Back to top</a>
             <h4>Watch the video for a quick guide!</h4>
-            <iframe width="300" height="170" src="https://www.youtube.com/embed/lRI17-vJvRc?si=Z4iRFBuog3aTCqB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/lRI17-vJvRc?si=Z4iRFBuog3aTCqB6" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <!-- THICKSHAKE CARD -->
         <div class="recipe-card" id="thickshake">
-            <img src="../../Recipe/thickshake.png" alt="thickshake" />
+            <img src="../../Recipe/thickshake.png" alt="thickshake"  >
             <h3>Recipe 2: Chocolate Thickshake</h3>
             <table class="ingredients-table">
                 <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
@@ -276,11 +290,11 @@
             </div>
             <a class="back-link" href="#header">Back to top</a>
             <h4>Watch the video for a quick guide!</h4>
-            <iframe width="300" height="170" src="https://www.youtube.com/embed/v-dBAqmGK7E?si=q1JJSnVx-CNp7LJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/v-dBAqmGK7E?si=q1JJSnVx-CNp7LJw" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <!-- PIZZA CARD -->
         <div class="recipe-card" id="pizza">
-            <img src="../../Recipe/pizza.png" alt="pizza" />
+            <img src="../../Recipe/pizza.png" alt="pizza"  >
             <h3>Recipe 3: Chicken Pizza</h3>
             <table class="ingredients-table">
                 <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
@@ -327,7 +341,7 @@
             </div>
             <a class="back-link" href="#header">Back to top</a>
             <h4>Watch the video for a quick guide!</h4>
-            <iframe width="300" height="170" src="https://www.youtube.com/embed/z6CmFx32k34?si=ym7NpqbpNPHmFpTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/z6CmFx32k34?si=ym7NpqbpNPHmFpTk" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
     <section class="review-section">
