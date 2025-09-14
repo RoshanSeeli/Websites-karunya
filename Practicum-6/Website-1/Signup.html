@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup!</title>
+    <link rel="icon" href="../../Recipe/kitchen.png">
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <div class="ambient">
+        <span>Click here for ambient music! -></span>
+        <audio src="../../Recipe/jazz.mp3" controls autoplay loop>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="signup-container">
+        <div class="signup-card">
+            <h1>Become a part of Grandma's Kitchen today!</h1>
+            <form>
+                <fieldset>
+                    <legend>Sign up Form</legend>
+                    <p>Fill in the details below to create an account:</p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label>Gender:</label>
+                    <div style="display:flex; gap:1rem; align-items:center;">
+                        <label><input type="radio" id="male" name="gender"> Male</label>
+                        <label><input type="radio" id="female" name="gender"> Female</label>
+                    </div>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    <label for="bio">Short Bio:</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..."></textarea>
+
+                    <label for="country">Country:</label>
+                    <select name="country" id="country">
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="UK">UK</option>
+                        <option value="Australia">Australia</option>
+                        <option value="India">India</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="other_country">Enter country (if other):</label>
+                    <input type="text" id="other_country" name="other_country" placeholder="Enter country name:">
+
+                    <label style="display:flex; align-items:center; gap:0.5rem;">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I would like to receive monthly letter about Grandma's Kitchen's future updates!
+                    </label>
+
+                    <input type="submit" value="Sign up!" onclick="window.open('Kitchen.html');">
+                </fieldset>
+            </form>
+        </div>
+        <div class="signup-video">
+            <video width="320" height="240" autoplay muted loop>
+                <source src="../../Recipe/cooking.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>

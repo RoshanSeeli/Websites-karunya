@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2em;
+        }
+        
+        .demo-section {
+            border: 2px solid #3498db;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        .demo-box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+            height: 40px;
+        }
+        
+        /* Display Examples */
+        .display-none { display: none; }
+        .display-inline { display: inline; }
+        .display-block { display: block; }
+        .display-inline-block { display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Display Properties Demo</h1>
+    
+    <div class="demo-section">
+        <h2>Display: none</h2>
+        <p>This box is hidden:</p>
+        <div class="demo-box">Visible Box</div>
+        <div class="demo-box display-none">Hidden Box</div>
+        <div class="demo-box">Another Visible Box</div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Display: inline</h2>
+        <p>These boxes are inline (side by side):</p>
+        <div class="demo-box display-inline">Inline 1</div>
+        <div class="demo-box display-inline">Inline 2</div>
+        <div class="demo-box display-inline">Inline 3</div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Display: block</h2>
+        <p>These boxes are block (stacked vertically):</p>
+        <div class="demo-box display-block">Block 1</div>
+        <div class="demo-box display-block">Block 2</div>
+        <div class="demo-box display-block">Block 3</div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Display: inline-block</h2>
+        <p>These boxes are inline-block (side by side but respect width/height):</p>
+        <div class="demo-box display-inline-block">Inline-Block 1</div>
+        <div class="demo-box display-inline-block">Inline-Block 2</div>
+        <div class="demo-box display-inline-block">Inline-Block 3</div>
+    </div>
+    
+    <p><a href="css-demo-index.html">Back to Index</a></p>
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Clear Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2em;
+        }
+        
+        .demo-section {
+            border: 2px solid #3498db;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        .demo-box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+            height: 50px;
+        }
+        
+        .container {
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        /* Float Examples */
+        .float-left { float: left; }
+        .float-right { float: right; }
+        .float-none { float: none; }
+        .float-inherit { float: inherit; }
+        
+        /* Clear Examples */
+        .clear-left { clear: left; }
+        .clear-right { clear: right; }
+        .clear-both { clear: both; }
+    </style>
+</head>
+<body>
+    <h1>Float & Clear Demo</h1>
+    
+    <div class="demo-section">
+        <h2>Float: left</h2>
+        <div class="container">
+            <div class="demo-box float-left">Float Left 1</div>
+            <div class="demo-box float-left">Float Left 2</div>
+            <p>This text flows around the floated elements.</p>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Float: right</h2>
+        <div class="container">
+            <div class="demo-box float-right">Float Right 1</div>
+            <div class="demo-box float-right">Float Right 2</div>
+            <p>This text flows around the right-floated elements.</p>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Float: none</h2>
+        <div class="container">
+            <div class="demo-box float-none">Float None</div>
+            <p>This element does not float and stays in normal flow.</p>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Clear: left</h2>
+        <div class="container">
+            <div class="demo-box float-left">Float Left</div>
+            <div class="demo-box clear-left">Clear Left</div>
+            <p>The "Clear Left" box clears left floats.</p>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Clear: right</h2>
+        <div class="container">
+            <div class="demo-box float-right">Float Right</div>
+            <div class="demo-box clear-right">Clear Right</div>
+            <p>The "Clear Right" box clears right floats.</p>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Clear: both</h2>
+        <div class="container">
+            <div class="demo-box float-left">Float Left</div>
+            <div class="demo-box float-right">Float Right</div>
+            <div class="demo-box clear-both">Clear Both</div>
+            <p>The "Clear Both" box clears all floats.</p>
+        </div>
+    </div>
+    
+    <p><a href="css-demo-index.html">Back to Index</a></p>
+    
+</body>
+</html>
