@@ -1,359 +1,457 @@
+
+
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Web Technology Practicum</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-        background: linear-gradient(135deg, #4e2e1e 0%, #7b4a2f 100%);
-        color: #f7f6f2;
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-      .contents-container {
-        max-width: 900px;
-        margin: 2rem auto;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        box-shadow: 0 4px 24px rgba(40,56,69,0.18);
-        padding: 2rem 2.5rem;
-        backdrop-filter: blur(1.5px);
-      }
-      .practicum-list {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-      }
-      .practicum-card {
-        background: linear-gradient(120deg, #7b4a2f 60%, #bc6c25 100%);
-        border-radius: 16px;
-        box-shadow: 0 2px 12px rgba(40,56,69,0.18);
-        padding: 2rem 2rem 1.5rem 2rem;
-        width: 100%;
-        max-width: 700px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 0.5rem;
-        color: #fffbe6;
-        transition: background 0.35s cubic-bezier(.4,1.4,.6,1), transform 0.25s cubic-bezier(.4,1.4,.6,1), box-shadow 0.25s;
-        will-change: background, transform, box-shadow;
-      }
-      .practicum-card:hover {
-        background: linear-gradient(120deg, #bc6c25 40%, #f2d492 100%);
-        transform: scale(1.03) translateY(-2px);
-        box-shadow: 0 6px 24px rgba(40,56,69,0.28);
-        cursor: pointer;
-      }
-      .practicum-header {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #f2d492;
-        margin-bottom: 1rem;
-        text-align: left;
-        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-        text-shadow: 1px 1px 6px #4e2e1e44;
-      }
-      .practicum-items > div {
-        margin-bottom: 0.5rem;
-        font-size: 1.08rem;
-        font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
-      }
-      .practicum-items a {
-        color: #4e2e1e;
-        background: #f2d492;
-        border-radius: 8px;
-        padding: 0.1rem 0.7rem;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background 0.2s, color 0.2s;
-        box-shadow: 0 1px 4px #4e2e1e22;
-      }
-      .practicum-items a:hover {
-        background: #4e2e1e;
-        color: #f2d492;
-      }
-      .practicum-details {
-        margin-top: 1rem;
-        font-size: 1rem;
-        font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
-      }
-      .practicum-details h3 {
-        color: #f2d492;
-        margin-bottom: 0.3rem;
-        font-size: 1.1rem;
-        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-        text-shadow: 1px 1px 6px #4e2e1e44;
-      }
-      .practicum-details ol, .practicum-details ul {
-        margin-left: 1.2rem;
-        margin-bottom: 0.7rem;
-      }
-      .tags-list {
-        color: #f2d492;
-        font-size: 1rem;
-        margin-bottom: 0.7rem;
-        font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
-        text-shadow: 1px 1px 6px #4e2e1e44;
-      }
-        .header-info {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #f2d492;
-        font-family: 'Montserrat', Arial, sans-serif;
-      }
-      .header-info h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-        text-shadow: 1px 1px 6px #4e2e1e44;
-      }
-      .header-info h2 {
-        font-size: 1.3rem;
-        margin-bottom: 0.3rem;
-        font-weight: 500;
-      }
-      .header-info h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.3rem;
-        font-weight: 400;
-      }
-      .header-info p {
-        font-size: 1rem;
-        margin: 0.2rem 0;
-      }
-        
-      @media (max-width: 900px) {
-        .contents-container {
-          padding: 1rem;
-        }
-        .practicum-card {
-          max-width: 98vw;
-          width: 98vw;
-          padding: 1rem;
-        }
-      }
-    </style>
-</head>
-<body>
-    <div class="contents-container">
-        
-          <div class="header-info">
-        <h1>Karunya Institute of Technology & Sciences</h1>
-        <h2>School of Computer Science & Technology</h2>
-        <h3>Division of Computer Science & Engineering</h3>
-        <p>Course: 25CS208 WEB-TECHNOLOGY (Batch URK25 Batch 2&3)</p>
-        <p>Academic Year: 2025-26 Semester: 1</p>
-        <p><strong>Roshan Anand Seeli (Regno: URK25CS1142)</strong></p>
-      </div>
-        
-      <h2 style="text-align:center;"><u>Contents</u></h2>
-      <div class="practicum-list">
-        <!-- Practicum 1 -->
-        <div class="practicum-card">
-          <div class="practicum-header">1. Static Website</div>
-          <div class="practicum-items">
-            <div>Page 1. My Resume <a target="_blank" href="Practicum-1/Website3/Resume.html">Resume</a></div>
-            <div>Page 2. Grandma's Kitchen <a target="_blank" href="Practicum-1/Website1/Kitchen">Recipe</a></div>
-            <div>Page 3. TekWik (Theme based Project) <a target="_blank" href="Practicum-1/Website2/TekWik.html">TekWik</a></div>
-            <div>File 4. Documentation <a target="_blank" href="Practicum-1/Practicum-1.pdf">URK25CS1142_Practicum1.pdf</a></div>
-          </div>
-          <div class="practicum-details">
-            <h3>Essential elements</h3>
-            <ol>
-              <li>&lt;Doctype&gt;</li>
-              <li>&lt;!--Comments--&gt;</li>
-              <li>&lt;html&gt;</li>
-              <li>&lt;head&gt;</li>
-              <li>&lt;title&gt;</li>
-              <li>&lt;meta&gt;</li>
-              <li>&lt;link&gt; (favicon)</li>
-              <li>&lt;h1&gt;, (h1-h2) tags</li>
-              <li>&lt;hr&gt;, &lt;br&gt;</li>
-              <li>&lt;center&gt;</li>
-              <li>&lt;img&gt;</li>
-              <li>&lt;a&gt; (internal, external, email, phone, fb, linkedin, insta)</li>
-              <li>&lt;p&gt;</li>
-              <li>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt; (rowspan and colspan)</li>
-              <li>&lt;ol&gt;, &lt;ul&gt;, &lt;dl&gt;</li>
-              <li>&lt;sup&gt;, &lt;sub&gt;, &lt;s&gt;</li>
-            </ol>
-            <h3>Semantic tags</h3>
-            <ol>
-              <li>&lt;header&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;strong&gt;, &lt;ins&gt;, &lt;emp&gt;, &lt;del&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</li>
-            </ol>
-          </div>
-        </div>
-        <!-- Practicum 2 -->
-        <div class="practicum-card">
-          <div class="practicum-header">2. Multimedia elements</div>
-          <div class="practicum-items">
-            <div>Page 1. Add Multimedia tags added to Grandma's Kitchen <a target="_blank" href="Practicum-2/Website-1/Kitchen.html">Recipe</a></div>
-            <div>Page 2. MomsReceipe-Multimedia Site (audio, video, youtube, etc.) <a target="_blank" href="Practicum-2/Website-1/Media.html">Media</a></div>
-            <div>Page 3. Add multimedia tags to TekWik <a target="_blank" href="Practicum-2/Website-2/TekWik.html">TekWik</a></div>
-            <div>File 4. URK25CS1142_Practicum2.pdf <a target="_blank" href="Practicum-2/Practicum-2.pdf">File link</a></div>
-          </div>
-          <div class="practicum-details">
-            <h3>Essential elements</h3>
-            <ol>
-              <li>&lt;picture&gt; (responsive images)</li>
-              <li>&lt;audio&gt; (autoplay, repeat)</li>
-              <li>&lt;video&gt; (autoplay, repeat)</li>
-              <li>&lt;iframe&gt; (video, website)</li>
-              <li>&lt;embed&gt; (youtube link)</li>
-            </ol>
-            <h3>Semantic tags</h3>
-            <ol>
-              <li>&lt;figure&gt;, &lt;figcaption&gt;</li>
-            </ol>
-          </div>
-        </div>
-        <!-- Practicum 3 -->
-        <div class="practicum-card">
-          <div class="practicum-header">3. Form elements</div>
-          <div class="practicum-items">
-            <div>Page 1. Add Form tags added to MomsReceipe <a target="_blank" href="Practicum-3/Website-1/Kitchen.html">Recipe</a></div>
-            <div>Page 2. Signup page <a target="_blank" href="Practicum-3/Website-1/Signup.html">Signup</a></div>
-            <div>Page 3. Add form tags to TekWik <a target="_blank" href="Practicum-3/Website-2/TekWik.html">TekWik</a></div>
-            <div>File 5. URK25CS1142_Practicum3.pdf <a target="_blank" href="Practicum-3/Practicum-3.pdf">File link</a></div>
-          </div>
-          <div class="practicum-details">
-            <h3>Essential elements</h3>
-            <ol>
-              <li>&lt;form&gt; (action, method)</li>
-              <li>&lt;input&gt; (text, password, radio, checkbox, button, submit, reset, number, date, time)</li>
-              <li>&lt;textarea&gt; (rows, cols)</li>
-              <li>&lt;button&gt;</li>
-              <li>&lt;select&gt;</li>
-            </ol>
-            <h3>Semantic tags</h3>
-            <ol>
-              <li>&lt;label&gt; (for), &lt;fieldset&gt;, &lt;legend&gt;</li>
-            </ol>
-            <h3>Attributes</h3>
-            <ol>
-              <li>placeholder, name, disabled, readonly, size, maxsize, autofocus</li>
-            </ol>
-            <h3>Patterns</h3>
-            <ol>
-              <li>check cellphone no, check small/big character with size limit, check strong password, check valid karunya regno</li>
-            </ol>
-          </div>
-        </div>
-        <!-- Practicum 4 -->
-        <div class="practicum-card">
-          <div class="practicum-header">4. Enhancing using CSS</div>
-          <div class="practicum-items">
-            <div>Page 1. Enhancements made to MomsReceipe using CSS <a target="_blank" href="Practicum-4/Website-1/Kitchen.html">Recipe</a></div>
-            <div>Page 2. Signup page <a target="_blank" href="Practicum-4/Website-1/Signup.html">Signup</a></div>
-            <div>Page 3. Enhanced TekWik design using CSS <a target="_blank" href="Practicum-4/Website-2/TekWik.html">TekWik</a></div>
-            <div>File 4. URK25CS1142_Practicum4.pdf <a target="_blank" href="Practicum-4/Practicum-4.pdf">File link</a></div>
-          </div>
-          <div class="practicum-details">
-            <h3>Essential elements</h3>
-            <ol>
-              <li>&lt;style&gt;</li>
-              <li>&lt;div&gt;</li>
-              <li>&lt;span&gt;</li>
-            </ol>
-            <h3>CSS properties used:</h3>
-            <ul class="tags-list">
-              <li>color</li>
-              <li>background-color</li>
-              <li>font-family</li>
-              <li>font-size</li>
-              <li>margin</li>
-              <li>padding</li>
-              <li>border</li>
-              <li>border-radius</li>
-              <li>box-shadow</li>
-              <li>width</li>
-              <li>max-width</li>
-              <li>height</li>
-              <li>text-align</li>
-              <li>display</li>
-              <li>flex-direction</li>
-              <li>justify-content</li>
-              <li>align-items</li>
-              <li>gap</li>
-              <li>float</li>
-              <li>clear</li>
-              <li>@media queries for responsiveness</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Practicum 5 -->
-        <div class="practicum-card">
-          <div class="practicum-header">5. Advanced CSS Layouts</div>
-          <div class="practicum-items">
-            <div>Page 1. Enhanced MomsReceipe with advanced CSS <a target="_blank" href="Practicum-5/Website-1/Kitchen.html">Recipe</a></div>
-            <div>Page 2. Styled Signup page with animations <a target="_blank" href="Practicum-5/Website-1/Signup.html">Signup</a></div>
-            <div>Page 3. Advanced TekWik design with CSS effects <a target="_blank" href="Practicum-5/Website-2/TekWik.html">TekWik</a></div>
-            <div>File 4. URK25CS1142_Practicum5.pdf <a target="_blank" href="Practicum-5/Practicum-5.pdf">File link</a></div>
-          </div>
-          <div class="practicum-details">
-            <h3>Position Property Values:</h3>
-            <ol>
-                <li>static</li>
-                <li>relative</li>
-                <li>absolute</li>
-                <li>fixed</li>
-                <li>sticky</li>
-            </ol>
-              <h3>Offset Properties</h3>
-            <ol>
-                <li>top, right, bottom, left</li>
-                <li>Default auto behavior vs. explicit values</li>
 
-            </ol>           
-          </div>
-        </div>
-        <!-- Practicum 6 
+  <head>
+    <title>Index Page</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <style>
+    body { 
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          background-color: #f9f9f9;
+     }
+    h1 {
+          color: #2c3e50;
+         }
+    h2 {
+          color: #34495e;
+          margin: 10px 0;
+         }
+
+    h3 { 
+          color: #7f8c8d;
+     }
+    table {
+          border-collapse: collapse;
+          margin: 20px auto;
+          background-color: white;
+         }
+    th { 
+         background-color: #3498db;
+         color: white;
+         padding: 10px;
+         }
+    td { 
+        padding: 8px;
+         border: 1px solid #bdc3c7;
+         }
+    a { 
+         color: #e74c3c;
+         text-decoration: none;
+         }
+    a:hover {
+         text-decoration: underline;
+         }
+    ol, ul {
+         line-height: 1.6;
+         }
+  </style>
+
+  </head>
+    <body>
+       <center>
+        <h1>Karunya Institute of Technology & Sciences </h1>
+        <h2>School of Computer Science & Technology </h2>
+        <h2>Division of Computer Science & Engineering </h2> 
+      </center>
+
+        <h2>Course: 25CS208 WEBTECHNOLOGY ( Batch URK25 Batch 3) </h2>   
+        <h2>Academic Year:2025-26  Semester:1 </h2>
+        <h2>Roshan Anand Seeli (URK25CS1142)) </h2> 
+       
+
+<center>
+<br>
+<h2><u>Contents</u></h2>
+<table border="1" >
+  <tr>
+    <th>Practicum No</th>
+    <th>File Description </th>
+    <th>File link </th>
+    
+  </tr>
+  <tr>
+    <td rowspan="6" align="center">1</td>
+    <th colspan="2">1.Static Website</th>
+  </tr>
+  <tr>
+    <td>Page 1.My Resume </td>
+    <td><a href="Practicum-1/Website3/Resume.html">link</a> </td>
+  </tr>
+  <tr>
+    <td>Page 2.Webpage for MomsReceipe with atleast 3 receipes</td>
+    <td><a href="Practicum-1/Website1/Kitchen.html">link</a> </td>
+  </tr>
+  <tr>
+    <td>Page 3. MyTheme with atleast 3 theme based heading (similar to receipes)</td>
+    <td><a href="Practicum-1/Website2/TekWik.html">link</a> </td>
+  </tr>
+  <tr>
+    <td>File 4.Documentation</td>
+    <td><a href="Practicum-1/Practicum-1.pdf"> URK25CS1142_Practicum1.pdf</a> </td>
+  </tr>
+  <tr>
+    
+    <td colspan="2">
+      <h3> Essential elements </h3>
+     <ol>
+      <li>  &lt;Doctype&gt; </li>
+      <li>  &lt;!--Comments--&gt; </li>
+      <li>  &lt;html&gt;</li>
+      <li>  &lt;head&gt;  </li>
+      <li>  &lt;title&gt; </li>
+       <li>  &lt;meta&gt; </li>
+      <li>  &lt;link&gt; (favicon) </li>
+      <li>  &lt;h1&gt; , (h1-h2) tags</li>
+      <li> &lt;hr&gt; </li>
+      <li> &lt;br&gt;</li>
+      <li> &lt;center&gt;</li>
+      <li> &lt;img&gt; </li>
+      <li> &lt;a &gt; ( internal,external, email, phone, fb, linkedin, insta)</li>
+      <li> &lt;p&gt; </li>
+      <li> &lt;table&gt;,   &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;(rowspan and colspan)</li>
+        <li> &lt;ol&gt;  </li>
+        <li> &lt;ul&gt;  </li>
+        <li> &lt;dl&gt; </li>
+        
+        <li> &lt;img&gt; </li>
+      <li> &lt;sup&gt;</li>
+        <li> &lt;sub&gt;</li>
+          <li> &lt;s&gt;</li>
+      </ol>
+      <h3>Semantic tags</h3>
+      <ol>
+        <li>&lt; header &gt;</li>
+        <li>&lt; footer &gt;</li>
+        <li>&lt; section &gt;</li>
+        <li>&lt; strong &gt;</li>
+        <li>&lt; ins &gt;</li>
+        <li>&lt; emp &gt; </li>
+         <li>&lt; del &gt;</li>
+        <li>&lt; thead &gt; , &lt; tbody &gt; , &lt; tfoot &gt; </li>
+
+      </ol>  
+
+    </td>
+  </tr>  
+<!-- practicum 2 -->
+  <tr>
+    <td rowspan="6" align="center">2</td>
+    <th colspan="2">2. Multimedia elements </th>
+  </tr>
+  <tr>
+    <td>Page 1.Multimedia tags added to MomsReceipe </td>
+    <td><a href="Practicum-2/Website-1/Kitchen.html"> Link 1</a> </td>
+  </tr>
+  <tr>
+    <td>Page 2. MomsReceipe-Multimedia Site</td>
+    <td><a href="Practicum-2/Website-1/Media.html"> Link 2</a> </td>
+  </tr>
+  <tr>
+    <td>Page 3.Multimedia tags added to theme webpage </td>
+    <td><a href="Practicum-3/Website-2/TekWik.html"> Link 3</a> </td>
+  </tr>
+  <tr>
+    <td>File 4.URK25CS1142_Practicum2.pdf  </td>
+    <td><a href="Practicum-2/Practicum-2.pdf">File link</a> </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <h3> Essential elements </h3>
+     <ol>
+         <li>&lt;picture &gt; ( dynamically change upon resizing)</li>
+        <li>&lt; audio &gt; (autoplay, repeat)</li>
+        <li>&lt; video &gt; (autoplay, repeat)</li>
+        <li>&lt; iframe &gt; (video,website)</li>
+        <li>&lt; embed &gt; ( youtube link, maps)</li>
+
+      </ol>
+      <h3>Semantic tags </h3>
+      <ol>
+        <li>&lt; figure &gt; </li>
+          <li>&lt; figcaption &gt;</li>
+      </ol> 
+
+    </td>
+    </tr> 
+
+<!-- practicum 3 -->
+
+  <tr>
+    <td rowspan="6" align="center">3</td>
+    <th colspan="2"> 3.Form elements </th>
+  </tr>
+  <tr>
+    <td>Page 1.Form tags added to MomsReceipe </td>
+    <td><a href="Practicum-3/Website-1/Kitchen.html"> Link 1</a> </td>
+  </tr>
+  
+  <tr>
+    <td>Page 2. Signup page  </td>
+    <td><a href="Practicum-3/Website-1/Login.html"> Link 2</a> </td>
+  </tr>
+  <tr>
+    <td>Page 3. Add form tags to your theme webpage </td>
+    <td><a href="Practicum-3/Website-2/TekWik.html"> Link 3</a> </td>
+  </tr>
+  <tr>
+    <td>File 4.URK25CS1142_Practicum3.pdf  </td>
+    <td><a href="Practicum-3/Practicum-3.pdf">File link</a> </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <h3> Essential elements </h3>
+     <ol>
+         <li>&lt;form &gt; (action, method)</li>
           
-        <div class="practicum-card">
-          <div class="practicum-header">6. Responsive Design & CSS Grid</div>
-          <div class="practicum-items">
-            <div>Page 1. Fully responsive MomsReceipe with CSS Grid <a target="_blank" href="Practicum-6/Website-1/Kitchen.html">Recipe</a></div>
-            <div>Page 2. Mobile-first Signup page <a target="_blank" href="Practicum-6/Website-1/Signup.html">Signup</a></div>
-            <div>Page 3. Complete responsive TekWik website <a target="_blank" href="Practicum-6/Website-2/TekWik.html">TekWik</a></div>
-            <div>File 4. URK25CS1142_Practicum6.pdf <a target="_blank" href="Practicum-6/Practicum-6.pdf">File link</a></div>
-          </div>
-          <div class="practicum-details">
-            <h3>Responsive design concepts</h3>
-            <ol>
-              <li>CSS Grid Layout (grid-template-areas)</li>
-              <li>Advanced Flexbox layouts</li>
-              <li>Media queries (breakpoints)</li>
-              <li>Mobile-first approach</li>
-              <li>Responsive images (srcset, sizes)</li>
-              <li>Container queries</li>
-              <li>Clamp() for responsive typography</li>
-            </ol>
-            <h3>Modern CSS techniques:</h3>
-            <ul class="tags-list">
-              <li>CSS Grid areas</li>
-              <li>Flexbox alignment</li>
-              <li>Responsive units (rem, em, %)</li>
-              <li>Min/max width constraints</li>
-              <li>Aspect-ratio property</li>
-              <li>CSS logical properties</li>
-              <li>Progressive enhancement</li>
-              <li>Cross-browser compatibility</li>
-              <li>Performance optimization</li>
-              <li>Accessibility considerations</li>
-            </ul>
-          </div>
-          
-        </div>
-          -->
-      </div>
-    </div>
-</body>
+        <li>&lt; input &gt; (type=text,password, 
+          radio, checkbox, button, submit, reset, number, date, time)</li>
+        <li>&lt; textarea &gt; (rows, cols)</li>
+        <li>&lt; button &gt; </li>
+        <li>&lt; select &gt; </li>
+
+      </ol>
+      <h3>Semantic tags </h3>
+      <ol>
+        <li>&lt; label &gt; (for)</li>
+        <li>&lt; fieldset     &gt; </li>
+          <li>&lt; legend &gt;</li>
+      </ol> 
+
+      <h3>Attributes </h3>
+      <ol>
+        <li> placeholder</li>
+        <li> name</li>
+        <li> disabled</li>
+        <li> readonly</li>
+        <li> size</li>
+        <li> maxsize</li>
+        <li> autofocus</li>
+       </ol>
+
+       <h3>Patterns </h3>
+         <ol>
+          <li> check cellphone no</li>
+          <li> check small or big character with size limit</li>
+          <li> check strong password</li>
+          <li> check valid karunya regno</li>
+        
+       </ol>
+    </td>
+    </tr> 
+
+<!-- Practicum 4 -->
+  <tr>
+    <td rowspan="4" align="center">4</td>
+    <th colspan="2" align="center"> <strong>4. Text & Layouts using CSS </strong> </th>
+  </tr>
+  <tr>
+    <td colspan="2">
+         <strong>Theme Based Question </strong><br>
+        Given a theme consisting of three &lt;div class="section" &gt; containers—each with a heading, an ordered list, an unordered list, a definition list, images, video, audio, an &lt;iframe&gt;, and a table—style the page by applying every CSS property/value below, distributed across inline styles, an internal &lt;style &gt; block, and an external stylesheet:
+<ul>
+<li>Display: none, inline, block, inline-block</li>
+<li>Float & Clear: float (left, right, none, inherit); clear (left, right, both)</li>
+<li>Box Model: width, height, padding, border, margin</li>
+<li>Text Styling: color, text-decoration, text-align, text-shadow, line-height, letter-spacing</li>
+<li>Font Styling: font-size (px, em, %), font-family, font-style (normal, italic, oblique)</li>
+</ul>
+ </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+     <strong>Pages required</strong>
+      <ol>
+      <li><a href="Practicum-4/Demo/css-demo-index.html">Demo Page</a></li>
+      <li><a href="Practicum-4/Website-1/Kitchen.html">Mom's Recipe</a></li>
+      <li><a href="Practicum-4/Website-2/TekWik.html">Theme based question</a></li>
+      <li><a href="Practicum-4/Practicum-4.pdf">URK25CS1142_Practicum-4.pdf</a></li>
+      </ol> 
+  </tr>
+  <tr>
+    <td colspan="2">
+
+<strong> Essentials </strong>
+<ul>
+ <li>Normal Flow
+<ol><li>none</li>
+<li>inline</li>
+<li>block</li>
+<li>inline-block</li>
+</ol>
+</li>
+
+<li>Float
+<ol> 
+<li>left</li>
+<li>right</li>
+<li>inherit</li>
+<li>none</li>
+</ol>
+</li>
+
+<li>Clear
+<ol> 
+<li>left</li>
+<li>right</li>
+<li>both</li>
+</ol>
+</li>
+
+<li>Box Model
+<ol> 
+<li>Content</li>
+<li>width, height</li>
+<li>Padding</li>
+<li>Border</li>
+<li>Margin</li>
+</ol>
+</li>
+
+<li>Text
+<ol> 
+<li>text-color</li>
+<li>text-decoration</li>
+<li>text-align</li>
+<li>text-shadow</li>
+<li>linespacing</li>
+<li>letter spacing</li>
+</ol>
+</li>
+
+<li>Font
+<ol> 
+<li>font-size( Absolute, relative, %)</li>
+<li>font-family</li>
+<li>font-style ( normal, italic, oblique)</li>
+</ol>
+</li>
+
+
+
+
+   </td>
+
+    </tr>  
+<!--Practicum-5-->
+  <tr>
+    <td rowspan="4" align="center">5 </td>
+    <th colspan="2" align="center"> <strong>5. CSS Positioning Elements </strong></th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Theme Based Question </strong><br>
+      Given a theme comprising three &lt;div class="section"&gt; blocks—each containing a heading, an ordered list, an unordered list, a definition list, images, video, audio, an &lt;iframe &gt;, and a table—apply every CSS positioning value below by splitting your rules across:
+
+      Inline styles on select elements
+      An internal &lt;style&gt; block for section-specific positioning
+      An external stylesheet for global layout rules
+
+      Position properties to use:
+      <ul>
+        <li>position: static</li>
+        <li>position: relative</li>
+        <li>position: absolute</li>
+        <li>position: fixed</li>
+        <li>position: sticky</li>
+      </ul>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Pages required</strong>
+      <ol>
+        <li><a href="Practicum-5/Demo/positioning-demo.html">Demo Page</a></li>
+        <li><a href="Practicum-5/Website-1/Kitchen.html">Mom's Recipe</a></li>
+        <li><a href="Practicum-5/Website-2/TekWik.html">Theme based question</a></li>
+        <li><a href="Practicum-5/Practicum-5.pdf">URK25CS1142_Practicum-5.pdf</a></li>
+      </ol> 
+    </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Requirements</strong>
+      <ul>
+        <li>Position Property Values
+          <ol>
+            <li> static</li>
+            <li>relative</li>
+            <li>absolute</li>
+            <li>fixed</li>
+            <li>sticky</li>
+          </ol>
+        </li>
+        <li>Offset Properties
+          <ol>
+            <li>top, right, bottom, left</li>
+            <li>Default auto behavior vs. explicit values</li>
+          </ol>
+        </li>
+      </ul>
+    </td>  
+  </tr>
+<!--Practicum-6-->
+  <tr>
+    <td rowspan="4" align="center">6 </td>
+    <th colspan="2" align="center"> <strong>6. CSS Flexbox Layout </strong></th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Theme Based Question </strong><br>
+      Given a theme comprising three &lt;div class="section"&gt; blocks—each containing a heading, an ordered list, an unordered list, a definition list, images, video, audio, an &lt;iframe &gt;, and a table—apply every CSS flexbox property below by splitting your rules across:
+
+      Inline styles on select elements
+      An internal &lt;style&gt; block for section-specific positioning
+      An external stylesheet for global layout rules
+
+      Flexbox properties to use:
+      <ul>
+        <li>display: flex</li>
+        <li>flex-direction: row | column</li>
+        <li>justify-content: flex-start | center | flex-end</li>
+        <li>align-items: flex-start | center | flex-end</li>
+        <li>flex-wrap: nowrap | wrap</li>
+      </ul>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Pages required</strong>
+      <ol>
+        <li><a href="Practicum-6/Demo/flex-demo.html">Demo Page</a></li>
+        <li><a href="Practicum-6/Website-1/Kitchen.html">Mom's Recipe</a></li>
+        <li><a href="Practicum-6/Website-2/TekWik.html">Theme based question</a></li>
+        <li><a href="Practicum-6/Practicum-6.pdf">URK25CS1142_Practicum6.pdf</a></li>
+      </ol> 
+    </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Requirements</strong>
+      <ul>
+        <li>Flex Container Properties
+          <ol>
+            <li>display: flex | inline-flex</li>
+            <li>flex-direction: row | column</li>
+            <li>justify-content: flex-start | center | flex-end</li>
+            <li>align-items: flex-start | center | flex-end</li>
+            <li>flex-wrap: nowrap | wrap</li>
+          </ol>
+        </li>
+        <li>Flex Item Properties
+          <ol>
+            <li>flex-grow: number</li>
+            <li>flex-shrink: number</li>
+            <li>align-self: auto | flex-start | center</li>
+          </ol>
+        </li>
+      </ul>
+    </td>  
+  </tr>
+
+</table>
+</center>
+       
+
+    </body>
 </html>
-
-
-
-
