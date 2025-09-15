@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1 id="header">Welcome to the Kitchen!</h1>
+        <h3>Here are a few recipes for some tasty dishes <del>which are very hard</del> which can be easily made at home.</h3>
     </header>
     <div class="ambient">
         <span>Click here for ambient music! -></span>
@@ -32,7 +33,12 @@
                 <input type="submit" value="Sign up!" onclick="window.open('Signup.html');">
                 <button type="reset">Reset</button>
             </form>
-           
+            <div style="margin-top:2rem;">
+                <video width="320" height="240" autoplay muted loop>
+                    <source src="../../Recipe/cooking.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
     </div>
     <div class="main-content">
@@ -46,78 +52,22 @@
         <div class="recipe-card" id="momo">
             <img src="../../Recipe/momo.jpg" alt="momos" />
             <h3>Recipe 1: Momos</h3>
-          <table class="ingredients-table">
-              <tr>
-                        <th>S no</th>
-                        <th>Ingredient</th>
-                        <th>Quantity</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maida</td>
-                        <td>2 cups</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Salt</td>
-                        <td>As per taste</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Water</td>
-                        <td>Enough to knead</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Oil</td>
-                        <td>1 tbsp</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Minced Chicken</td>
-                        <td>250g</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Medium onion</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Spring onion</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Garlic</td>
-                        <td>1 tbsp finely chopped</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Ginger</td>
-                        <td>1 tbsp finely chopped</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Green Chilli</td>
-                        <td>1 tbsp finely chopped</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Pepper</td>
-                        <td>0.5 tbsp</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Soy Sauce</td>
-                        <td>1 tsp</td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Oil</td>
-                        <td>1 tsp</td>
-                    </tr>
-                </table>
+            <table class="ingredients-table">
+                <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
+                <tr><td>1</td><td>Maida</td><td>2 cups</td></tr>
+                <tr><td>2</td><td>Salt</td><td>As per taste</td></tr>
+                <tr><td>3</td><td>Water</td><td>Enough to knead</td></tr>
+                <tr><td>4</td><td>Oil</td><td>1 tbsp</td></tr>
+                <tr><td>5</td><td>Minced Chicken</td><td>250g</td></tr>
+                <tr><td>6</td><td>Medium onion</td><td>1</td></tr>
+                <tr><td>7</td><td>Spring onion</td><td>1</td></tr>
+                <tr><td>8</td><td>Garlic</td><td>1 tbsp finely chopped</td></tr>
+                <tr><td>9</td><td>Ginger</td><td>1 tbsp finely chopped</td></tr>
+                <tr><td>10</td><td>Green Chilli</td><td>1 tbsp finely chopped</td></tr>
+                <tr><td>11</td><td>Pepper</td><td>0.5 tbsp</td></tr>
+                <tr><td>12</td><td>Soy Sauce</td><td>1 tsp</td></tr>
+                <tr><td>13</td><td>Oil</td><td>1 tsp</td></tr>
+            </table>
             <div class="method-list">
                 <h4>Method:</h4>
                 <ol>
@@ -161,37 +111,12 @@
             <img src="../../Recipe/thickshake.png" alt="thickshake" />
             <h3>Recipe 2: Chocolate Thickshake</h3>
             <table class="ingredients-table">
-                <tr>
-                    <th>S no</th>
-                    <th>Ingredient</th>
-                    <th>Quantity</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Cold Milk(Full cream for best thickness)</td>
-                    <td>2 cups</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Chocolate Ice Cream</td>
-                    <td>4 Scoops</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Chocolate Syrup</td>
-                    <td>3-4 tbsp chocolate syrup(or cocoa powder+sugar)</td>
-                </tr>
-
-                <tr>
-                    <td>4</td>
-                    <td>Whipped Cream</td>
-                    <td>As needed</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Chocolate sprinkles(optional)</td>
-                    <td>As needed</td>
-                </tr>
+                <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
+                <tr><td>1</td><td>Cold Milk(Full cream for best thickness)</td><td>2 cups</td></tr>
+                <tr><td>2</td><td>Chocolate Ice Cream</td><td>4 Scoops</td></tr>
+                <tr><td>3</td><td>Chocolate Syrup</td><td>3-4 tbsp chocolate syrup(or cocoa powder+sugar)</td></tr>
+                <tr><td>4</td><td>Whipped Cream</td><td>As needed</td></tr>
+                <tr><td>5</td><td>Chocolate sprinkles(optional)</td><td>As needed</td></tr>
             </table>
             <div class="method-list">
                 <h4>Method:</h4>
@@ -224,52 +149,16 @@
         <div class="recipe-card" id="pizza">
             <img src="../../Recipe/pizza.png" alt="pizza" />
             <h3>Recipe 3: Chicken Pizza</h3>
-           <table class="ingredients-table">
-                <tr>
-                    <th>S no</th>
-                    <th>Ingredient</th>
-                    <th>Quantity</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>ready-made pizza base</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>cooked chicken (shredded or diced)</td>
-                    <td>100g</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>pizza sauce (or ketchup + oregano)</td>
-                    <td>½ cup</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>mozzarella cheese (grated)</td>
-                    <td>1 cup</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>onion (sliced)</td>
-                    <td>½</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Capsicum(sliced)</td>
-                    <td>½</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>oil/butter</td>
-                    <td>1 tbsp</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Salt, pepper,oregano/chilli flakes</td>
-                    <td>As per taste</td>
-                </tr>
+            <table class="ingredients-table">
+                <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
+                <tr><td>1</td><td>ready-made pizza base</td><td>1</td></tr>
+                <tr><td>2</td><td>cooked chicken (shredded or diced)</td><td>100g</td></tr>
+                <tr><td>3</td><td>pizza sauce (or ketchup + oregano)</td><td>½ cup</td></tr>
+                <tr><td>4</td><td>mozzarella cheese (grated)</td><td>1 cup</td></tr>
+                <tr><td>5</td><td>onion (sliced)</td><td>½</td></tr>
+                <tr><td>6</td><td>Capsicum(sliced)</td><td>½</td></tr>
+                <tr><td>7</td><td>oil/butter</td><td>1 tbsp</td></tr>
+                <tr><td>8</td><td>Salt, pepper,oregano/chilli flakes</td><td>As per taste</td></tr>
             </table>
             <div class="method-list">
                 <h4>Method:</h4>
