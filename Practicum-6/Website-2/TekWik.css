@@ -1,9 +1,11 @@
 
         body {
+            background-color: #283845;
             color: #F2D492;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
         a {
             color: #F2D492;
@@ -11,10 +13,13 @@
         }
         a:hover {
             color: #bc6c25;
+            text-decoration: underline;
         }
         .news-header {
+            background-color: #606c38;
             padding: 2rem 0 1rem 0;
             text-align: center;
+            border: 2px solid #bc6c25;
         }
         .news-header img {
             height: 40px;
@@ -37,12 +42,15 @@
         }
         .sidebar {
             flex: 1;
+            background-color: #606c38;
             padding: 1.5rem;
             color: #fff;
             width: 250px;
+            border: 2px solid #bc6c25;
             position: sticky;
             top: 20px;
-            position: relative;
+            height: fit-content;
+            align-self: flex-start;
         }
         .toggle-btn {
             position: absolute;
@@ -68,13 +76,17 @@
         }
         .featured {
             margin-bottom: 2rem;
+            background-color: #606c38;
             padding: 1.5rem;
             color: #fff;
+            border: 2px solid #bc6c25;
+            text-align: left;
         }
         .featured video, .featured img {
             width: 100%;
             height: auto;
             margin-bottom: 1rem;
+            border: 2px solid #bc6c25;
         }
         .featured h3 {
             color: #bc6c25;
@@ -86,7 +98,7 @@
         .news-article {
             margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 1px;
+            border-bottom: 1px solid #d3cda5;
         }
         .news-article:last-child {
             border-bottom: none;
@@ -104,31 +116,38 @@
             height: 50px;
             width: auto;
             margin-right: 1rem;
+            border: 1px solid #bc6c25;
         }
         .feedback-section {
             margin-top: 2rem;
+            background-color: #606c38;
             padding: 1.5rem;
             color: #fff;
             text-align: center;
+            border: 2px solid #bc6c25;
         }
         .feedback-section textarea {
             width: 90%;
-            border: none;
+            border: 1px solid #bc6c25;
             padding: 1rem;
             font-size: 1rem;
             margin-bottom: 1rem;
         }
         .feedback-section input[type="submit"], .submit-button {
+            background-color: #bc6c25;
             color: #fff;
-            border: none;
+            border: 2px solid #bc6c25;
             padding: 0.7rem 2rem;
             font-size: 1rem;
             margin: 0.5rem;
         }
         .feedback-section input[type="submit"]:hover, .submit-button:hover {
+            background-color: #d3cda5;
             color: #283845;
+            text-decoration: underline;
         }
         .footer {
+            background-color: #283845;
             color: #d3cda5;
             text-align: center;
             padding: 2rem 0 1rem 0;
