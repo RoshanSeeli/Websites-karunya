@@ -10,6 +10,7 @@ body {
 header {
     text-align: center;
     padding: 32px;
+    margin-right: 360px;
 }
 
 .ambient {
@@ -22,14 +23,14 @@ header {
     top: 0;
     right: 0;
     height: 100%;
-    width: 400px;
-    padding-right: 24px;
+    width: 320px;
+    padding-right: 20px;
 }
 
 .hero-video {
     position: sticky;
     top: 32px;
-    width: 400px;
+    width: 320px;
     margin-bottom: 16px;
 }
 
@@ -53,6 +54,10 @@ header {
     background-color: #bc6c25;
     color: white;
     text-decoration: underline;
+}
+
+.main-content {
+    margin-right: 360px;
 }
 
 .recipes-container {
@@ -124,13 +129,13 @@ header {
 }
 
 .review-section {
-    width: 400px;
+    width: 320px;
     background-color: #606c38;
     border: 2px solid #bc6c25;
     color: white;
     text-align: center;
-    padding: 32px;
-    margin-top: 32px;
+    padding: 24px;
+    margin-top: 24px;
 }
 
 .review-section textarea {
