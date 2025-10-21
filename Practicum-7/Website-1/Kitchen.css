@@ -1,0 +1,323 @@
+/* Kitchen.css - CSS Grid Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4e2e1e;
+    color: #DDA15E;
+    font-family: 'Cursive', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Main Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer";
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Header Area */
+.header {
+    grid-area: header;
+    text-align: center;
+    padding: 2rem 0;
+    background: #606c38;
+    border: 2px solid #bc6c25;
+    border-radius: 12px;
+}
+
+.ambient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Sidebar Area */
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+}
+
+.hero-video {
+    background: #606c38;
+    border: 2px solid #bc6c25;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-video:hover {
+    transform: scale(1.02);
+}
+
+.hero-video video {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.review-section {
+    background: #606c38;
+    border: 2px solid #bc6c25;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.review-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+    border: 2px solid #bc6c25;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.review-section input[type="submit"], 
+.review-section button {
+    background: #bc6c25;
+    color: #fff;
+    border: 2px solid #bc6c25;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.review-section input[type="submit"]:hover, 
+.review-section button:hover {
+    background: #d3cda5;
+    color: #283618;
+}
+
+/* Main Content Area */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+}
+
+.recipes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.recipes-list a {
+    color: #d3cda5;
+    background: #606c38;
+    padding: 1rem;
+    border: 2px solid #bc6c25;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.recipes-list a:hover {
+    background: #bc6c25;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Recipes Grid */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.recipe-card {
+    background: #606c38;
+    color: #fff;
+    padding: 1.5rem;
+    border: 2px solid #bc6c25;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #bc6c25;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.recipe-card h3 {
+    color: #BC6C25;
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+}
+
+/* Ingredients Table Grid */
+.ingredients-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.ingredients-table th, 
+.ingredients-table td {
+    border: 1px solid #d3cda5;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.ingredients-table th {
+    background: #bc6c25;
+    color: #fff;
+    font-weight: bold;
+}
+
+.method-list {
+    margin-bottom: 1.5rem;
+}
+
+.method-list ol {
+    padding-left: 1.5rem;
+}
+
+.method-list ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.back-link {
+    color: #d3cda5;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.recipe-card iframe {
+    width: 100%;
+    height: 200px;
+    border: 3px solid #bc6c25;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Footer Area */
+.footer {
+    grid-area: footer;
+    background: #606c38;
+    border: 2px solid #bc6c25;
+    border-radius: 12px;
+    color: #d3cda5;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer h2 {
+    color: #bc6c25;
+    margin-bottom: 1rem;
+}
+
+.credit-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.credit-links a {
+    color: #d3cda5;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+.credit-links a:hover {
+    color: #bc6c25;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    
+    .sidebar {
+        position: static;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recipes-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .credit-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .header, .sidebar, .main-content, .footer {
+        padding: 1rem;
+    }
+    
+    .recipe-card {
+        padding: 1rem;
+    }
+}

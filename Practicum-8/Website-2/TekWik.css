@@ -1,0 +1,395 @@
+/* TekWik.css - CSS Grid Layout (Maintaining Original Design) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #283845;
+    color: #F2D492;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: #F2D492;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #bc6c25;
+    text-decoration: underline;
+}
+
+/* Main Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer";
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 2rem;
+    padding: 0;
+}
+
+/* Header Area */
+.news-header {
+    grid-area: header;
+    background-color: #606c38;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    border: 2px solid #bc6c25;
+    margin: 0;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.news-header img {
+    height: 40px;
+    width: auto;
+}
+
+.news-header h1 {
+    display: inline;
+    color: #F2D492;
+}
+
+.news-header h1 span {
+    font-size: 1rem;
+    color: #d3cda5;
+}
+
+.ambient {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Main Content Area */
+.main-content {
+    grid-area: main;
+    margin: 2rem 0 2rem 2rem;
+}
+
+/* Featured Section Grid */
+.featured-section {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.featured {
+    background-color: #606c38;
+    padding: 1.5rem;
+    color: #fff;
+    border: 2px solid #bc6c25;
+    text-align: left;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.featured:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.featured video, .featured img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 2px solid #bc6c25;
+    border-radius: 6px;
+}
+
+.featured h3 {
+    color: #bc6c25;
+    margin-bottom: 0.5rem;
+    font-size: 1.3em;
+}
+
+.featured h4 {
+    color: #d3cda5;
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+}
+
+.featured p {
+    margin-bottom: 1rem;
+}
+
+/* News Section */
+.news-section {
+    margin-bottom: 2rem;
+}
+
+.news-article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d3cda5;
+    align-items: start;
+}
+
+.news-article:last-child {
+    border-bottom: none;
+}
+
+.news-article img, .news-article video {
+    height: 50px;
+    width: auto;
+    border: 1px solid #bc6c25;
+    border-radius: 4px;
+}
+
+.news-article video {
+    width: 90px;
+    height: auto;
+}
+
+.news-content {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.news-article h4 {
+    color: #bc6c25;
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.news-article .meta {
+    font-size: 0.9rem;
+    color: #d3cda5;
+    margin-bottom: 0.5rem;
+}
+
+/* Feedback Section */
+.feedback-section {
+    background-color: #606c38;
+    padding: 1.5rem;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #bc6c25;
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+}
+
+.feedback-section textarea {
+    width: 90%;
+    border: 1px solid #bc6c25;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+.feedback-section input[type="submit"], 
+.submit-button {
+    background-color: #bc6c25;
+    color: #fff;
+    border: 2px solid #bc6c25;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.feedback-section input[type="submit"]:hover, 
+.submit-button:hover {
+    background-color: #d3cda5;
+    color: #283845;
+    text-decoration: underline;
+}
+
+/* Sidebar Area */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #606c38;
+    padding: 1.5rem;
+    color: #fff;
+    border: 2px solid #bc6c25;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    align-self: flex-start;
+    margin: 2rem 2rem 2rem 0;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    color: #bc6c25;
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+
+.headline-list {
+    margin-bottom: 2rem;
+}
+
+.headline-list ul {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.headline-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.sidebar hr {
+    border: 1px solid #d3cda5;
+    margin: 2rem 0;
+}
+
+/* Topics Section */
+.sidebar ul[style*="list-style:none"] {
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.sidebar ul[style*="list-style:none"] li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.sidebar input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* Email Signup Form */
+.sidebar form {
+    display: grid;
+    gap: 1rem;
+}
+
+.sidebar input[type="email"] {
+    padding: 0.8rem;
+    border: 2px solid #bc6c25;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Event Section */
+.sidebar picture img {
+    height: 20px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.sidebar h4 {
+    color: #bc6c25;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1em;
+}
+
+.sidebar p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+/* Most Popular Section */
+.news-section ul {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.news-section li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Footer Area */
+.footer {
+    grid-area: footer;
+    background-color: #283845;
+    color: #d3cda5;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 1rem;
+    border-top: 2px solid #606c38;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    
+    .main-content {
+        margin: 1rem;
+    }
+    
+    .sidebar {
+        position: static;
+        margin: 1rem;
+    }
+    
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .ambient {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        gap: 1rem;
+    }
+    
+    .news-article {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .news-article img, .news-article video {
+        justify-self: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .featured, .feedback-section, .sidebar {
+        padding: 1rem;
+    }
+    
+    .news-header {
+        padding: 1rem;
+    }
+}

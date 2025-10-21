@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandma's Kitchen!</title>
+    <link rel="icon" href="../../Recipe/kitchen.png"/>
+    <link rel="stylesheet" href="Kitchen.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <h1 id="header">Welcome to the Kitchen!</h1>
+            <h3>Here are a few recipes for some tasty dishes <del>which are very hard</del> which can be easily made at home.</h3>
+            <div class="ambient">
+                <span>Click here for ambient music! -></span>
+                <audio src="../../Recipe/jazz.mp3" controls autoplay loop>
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </header>
+        
+        <aside class="sidebar">
+            <div class="hero-video">
+                <video width="100%" autoplay muted loop onclick="window.open('../../Recipe/cooking.mp4')">
+                    <source src="../../Recipe/cooking.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <section class="review-section">
+                <h3>Your review is Valuable!</h3>
+                <h4>Please leave your review below!</h4>
+                <form>
+                    <textarea name="textarea" id="textarea" placeholder="Leave your Review here!" rows="4"></textarea><br>
+                    <input type="submit" value="Sign up!" onclick="window.open('Signup.html');">
+                    <button type="reset">Reset</button>
+                </form>
+            </section>
+        </aside>
+        
+    <main class="main-content">
+        <nav class="recipes-list">
+            <a href="#momo">Momo</a>
+            <a href="#sandwich">Chicken Sandwich</a>
+            <a href="#thickshake">Chocolate Thickshake</a>
+            <a href="#pizza">Chicken Pizza</a>
+        </nav>
+        <section class="recipes-grid">
+        <!-- MOMO CARD -->
+        <div class="recipe-card" id="momo">
+            <img src="../../Recipe/momo.jpg" alt="momos" />
+            <h3>Recipe 1: Momos</h3>
+<table class="ingredients-table">
+    <tr>
+          <th>S no</th>
+          <th>Ingredient</th>
+          <th>Quantity</th>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Maida</td>
+          <td>2 cups</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Salt</td>
+          <td>As per taste</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Water</td>
+          <td>Enough to knead</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Oil</td>
+          <td>1 tbsp</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Minced Chicken</td>
+          <td>250g</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>Medium onion</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>Spring onion</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>Garlic</td>
+          <td>1 tbsp finely chopped</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>Ginger</td>
+          <td>1 tbsp finely chopped</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>Green Chilli</td>
+          <td>1 tbsp finely chopped</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>Pepper</td>
+          <td>0.5 tbsp</td>
+      </tr>
+      <tr>
+          <td>12</td>
+          <td>Soy Sauce</td>
+          <td>1 tsp</td>
+      </tr>
+      <tr>
+          <td>13</td>
+          <td>Oil</td>
+          <td>1 tsp</td>
+      </tr>
+</table>
+            <div class="method-list">
+                <h4>Method:</h4>
+                <ol>
+                    <li>Make the dough
+                        <ul>
+                            <li>In a bowl, mix flour and salt.</li>
+                            <li>Add water slowly and knead into a smooth, soft dough.</li>
+                            <li>Cover and let it rest for 20–30 mins.</li>
+                        </ul>
+                    </li>
+                    <li>Prepare the filling
+                        <ul>
+                            <li>In another bowl, mix chicken, onion, garlic, ginger, chilli, salt, pepper, soy sauce, and oil.</li>
+                            <li>Stir well so the flavours combine.</li>
+                        </ul>
+                    </li>
+                    <li>Shape the momos
+                        <ul>
+                            <li>Divide dough into small balls.</li>
+                            <li>Roll each into a thin circle (like small puris).</li>
+                            <li>Place 1 spoon of filling in the centre.</li>
+                            <li>Fold and pleat the edges to seal (half-moon or round shape).</li>
+                        </ul>
+                    </li>
+                    <li>Steam them
+                        <ul>
+                            <li>Place momos in a greased steamer (or use a plate inside a big vessel with a lid).</li>
+                            <li>Steam for 10–12 mins until dough is cooked and slightly glossy.</li>
+                            <li><strong>Serve hot!</strong></li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Best enjoyed with spicy chutney or tomato–chilli sauce.</p>
+            </div>
+            <a class="back-link" href="#header">Back to top</a>
+            <h4>Watch the video for a quick guide!</h4>
+            <iframe src="https://www.youtube.com/embed/lRI17-vJvRc?si=Z4iRFBuog3aTCqB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- CHICKEN SANDWICH CARD -->
+        <div class="recipe-card" id="sandwich">
+            <img src="../../Recipe/sandwich.jpeg" alt="chicken sandwich" />
+            <h3>Recipe 2: Chicken Sandwich</h3>
+            <table class="ingredients-table">
+                <tr>
+                    <th>S no</th>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bread slices</td>
+                    <td>4 slices</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chicken breast</td>
+                    <td>200g</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mayonnaise</td>
+                    <td>3 tbsp</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lettuce leaves</td>
+                    <td>4-5 leaves</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Tomato sliced</td>
+                    <td>1 medium</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Onion sliced</td>
+                    <td>½ medium</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Cheese slice</td>
+                    <td>2 slices</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Salt and pepper</td>
+                    <td>As per taste</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Butter</td>
+                    <td>2 tbsp</td>
+                </tr>
+            </table>
+            <div class="method-list">
+                <h4>Method:</h4>
+                <ol>
+                    <li>Cook the chicken
+                        <ul>
+                            <li>Season chicken breast with salt and pepper.</li>
+                            <li>Heat 1 tbsp butter in a pan and cook chicken for 6-8 mins each side.</li>
+                            <li>Let it cool and slice into thin pieces.</li>
+                        </ul>
+                    </li>
+                    <li>Prepare vegetables
+                        <ul>
+                            <li>Wash and dry lettuce leaves.</li>
+                            <li>Slice tomatoes and onions into thin rounds.</li>
+                        </ul>
+                    </li>
+                    <li>Assemble sandwich
+                        <ul>
+                            <li>Toast bread slices lightly with remaining butter.</li>
+                            <li>Spread mayonnaise on one side of each bread slice.</li>
+                            <li>Layer lettuce, chicken, tomato, onion, and cheese.</li>
+                            <li>Top with second bread slice.</li>
+                        </ul>
+                    </li>
+                    <li>Serve
+                        <ul>
+                            <li>Cut diagonally and serve immediately.</li>
+                            <li><strong>Enjoy your fresh sandwich!</strong></li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Perfect for a quick lunch or light dinner!</p>
+            </div>
+            <a class="back-link" href="#header">Back to top</a>
+            <h4>Watch the video for a quick guide!</h4>
+            <iframe src="https://www.youtube.com/embed/_SSGoVq5eSY?si=Hkp_2IjBAr-lCuA2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- THICKSHAKE CARD -->
+        <div class="recipe-card" id="thickshake">
+            <img src="../../Recipe/thickshake.png" alt="thickshake" />
+            <h3>Recipe 3: Chocolate Thickshake</h3>
+            <table class="ingredients-table">
+                <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
+                <tr><td>1</td><td>Cold Milk(Full cream for best thickness)</td><td>2 cups</td></tr>
+                <tr><td>2</td><td>Chocolate Ice Cream</td><td>4 Scoops</td></tr>
+                <tr><td>3</td><td>Chocolate Syrup</td><td>3-4 tbsp chocolate syrup(or cocoa powder+sugar)</td></tr>
+                <tr><td>4</td><td>Whipped Cream</td><td>As needed</td></tr>
+                <tr><td>5</td><td>Chocolate sprinkles(optional)</td><td>As needed</td></tr>
+            </table>
+            <div class="method-list">
+                <h4>Method:</h4>
+                <ol>
+                    <li>Blend it
+                        <ul>
+                            <li>In a blender, add milk, chocolate ice cream, and chocolate syrup.</li>
+                            <li>Blend for about 30–40 seconds until smooth and creamy.</li>
+                        </ul>
+                    </li>
+                    <li>Serve
+                        <ul>
+                            <li>Pour into chilled glasses.</li>
+                            <li>Top with whipped cream, chocolate syrup drizzle, and shavings if you want it fancy.</li>
+                        </ul>
+                    </li>
+                    <li>Enjoy
+                        <ul>
+                            <li>Serve immediately with a straw or spoon (it’ll be thick).</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>If you want it extra thick, just reduce milk to 1½ cups or add 1 more scoop of ice cream!</p>
+            </div>
+            <a class="back-link" href="#header">Back to top</a>
+            <h4>Watch the video for a quick guide!</h4>
+            <iframe src="https://www.youtube.com/embed/v-dBAqmGK7E?si=q1JJSnVx-CNp7LJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- PIZZA CARD -->
+        <div class="recipe-card" id="pizza">
+            <img src="../../Recipe/pizza.png" alt="pizza" />
+            <h3>Recipe 4: Chicken Pizza</h3>
+            <table class="ingredients-table">
+                <tr><th>S no</th><th>Ingredient</th><th>Quantity</th></tr>
+                <tr><td>1</td><td>ready-made pizza base</td><td>1</td></tr>
+                <tr><td>2</td><td>cooked chicken (shredded or diced)</td><td>100g</td></tr>
+                <tr><td>3</td><td>pizza sauce (or ketchup + oregano)</td><td>½ cup</td></tr>
+                <tr><td>4</td><td>mozzarella cheese (grated)</td><td>1 cup</td></tr>
+                <tr><td>5</td><td>onion (sliced)</td><td>½</td></tr>
+                <tr><td>6</td><td>Capsicum(sliced)</td><td>½</td></tr>
+                <tr><td>7</td><td>oil/butter</td><td>1 tbsp</td></tr>
+                <tr><td>8</td><td>Salt, pepper,oregano/chilli flakes</td><td>As per taste</td></tr>
+            </table>
+            <div class="method-list">
+                <h4>Method:</h4>
+                <ol>
+                    <li>Prep the oven and the Chicken
+                        <ul>
+                            <li>Preheat the oven to 200<sup>o</sup>C</li>
+                            <li>Heat oil in a pan, toss chicken with salt, pepper, and oregano for 1-2 mins.</li>
+                        </ul>
+                    </li>
+                    <li>Assemble the pizza
+                        <ul>
+                            <li>Spread pizza sauce evenly over the base</li>
+                            <li>Add half the cheese first.</li>
+                            <li>Arrange chicken, onion, and capsicum slices. </li>
+                            <li>Sprinkle remaining cheese on top.</li>
+                        </ul>
+                    </li>
+                    <li>Bake
+                        <ul>
+                            <li>Place pizza on a tray or directly on the oven rack.</li>
+                            <li>Bake for 8-10 mins until cheese melts and edges turn golden</li>
+                        </ul>
+                    </li>
+                    <li>Serve
+                        <ul>
+                            <li>Sprinkle chilli flakes or extra oregano.</li>
+                            <li>Slice and enjoy hot</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>If you want it extra cheesy, add ½ cup more mozzarella or mix in cheddar for extra flavour.</p>
+            </div>
+            <a class="back-link" href="#header">Back to top</a>
+            <h4>Watch the video for a quick guide!</h4>
+            <iframe src="https://www.youtube.com/embed/z6CmFx32k34?si=ym7NpqbpNPHmFpTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <h2>Thank You!</h2>
+            <div class="credits">
+                <p>Image Credits:</p>
+                <div class="credit-links">
+                    <a href="../../Recipe/kitchen.png" target="_blank">Favicon</a>
+                    <a href="../../Recipe/momo.jpg" target="_blank">Momo Image</a>
+                    <a href="../../Recipe/pizza.png" target="_blank">Pizza Image</a>
+                    <a href="../../Recipe/thickshake.png" target="_blank">Chocolate Thickshake</a>
+                    <a href="mailto:" target="_blank">Contact me!</a>
+                    <a href="../Website-2/TekWik.html" target="_blank">Visit TekWik!</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
