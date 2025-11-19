@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup!</title>
+    <link rel="icon" href="../../TekWik/icon.png">
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Become a part of TekWik Community today!</h1>
+    
+    <div class="ambient">
+    <audio src="../../TekWik/TechMusic.mp3" controls autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Sign up Form</legend>
+            <div style="float:right;">
+            <div class="video-container">
+                 <video autoplay muted loop>
+        <source src="../../Tekwik/JeryyTheCoder_compressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+            </div>
+            <p>Fill in the details below to create an account:</p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label>Gender:</label><br>
+            <span>Male</span><input type="radio" id="male" name="gender">
+            <span>Female</span><input type="radio" id="female" name="gender"><br><br>
+            
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required><br><br>
+
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required><br><br>
+           
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your phone number" pattern="^\d{10}$" required><br><br>   
+
+            <label for="bio">Short Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us a bit about yourself..."></textarea><br><br>
+
+            <label for="country">Country:</label><br>
+            <select name="country" id="country">
+                <option value="" disabled selected>Select your country</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="India">India</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <label for="other_country">Enter country (if other):</label><br>
+            <input type="text" id="other_country" name="other_country" placeholder="Enter country name:"><br><br>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I would like to receive monthly letter about Grandma's Kitchen's future updates!</label><br><br>
+
+            <input type="submit" value="Sign up!" onclick="alert('Your application will be processed'); window.open('TekWik.html');">
+        </fieldset>
+    </form>
+</body>
+</html>

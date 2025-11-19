@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Workshop Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            text-align: center;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .error.show {
+            display: block;
+        }
+        
+        .input-error {
+            border-color: #e74c3c !important;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #764ba2, #f093fb);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .submit-btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        .success {
+            background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(86, 171, 47, 0.4);
+            animation: bounceIn 0.6s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Technical Workshop Registration</h1>
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+                <div class="error" id="nameError">Name is required and cannot be empty</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                <div class="error" id="emailError">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age *</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="60">
+                <div class="error" id="ageError">Age must be between 18 and 60</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number">
+                <div class="error" id="phoneError">Phone number must be exactly 10 digits</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="department">Department *</label>
+                <select id="department" name="department">
+                    <option value="">Select your department</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Electronics">Electronics & Communication</option>
+                    <option value="Mechanical">Mechanical Engineering</option>
+                    <option value="Civil">Civil Engineering</option>
+                    <option value="Electrical">Electrical Engineering</option>
+                    <option value="Chemical">Chemical Engineering</option>
+                    <option value="Biotechnology">Biotechnology</option>
+                </select>
+                <div class="error" id="departmentError">Please select your department</div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">Register for Workshop</button>
+        </form>
+        
+        <div class="success" id="successMessage">
+            Registration successful! You will receive a confirmation email shortly.
+        </div>
+    </div>
+
+    <script>
+        // Get form elements using DOM methods
+        const form = document.getElementById('registrationForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const ageInput = document.getElementById('age');
+        const phoneInput = document.getElementById('phone');
+        const departmentSelect = document.getElementById('department');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+
+        // Validation functions
+        function validateName() {
+            const name = nameInput.value.trim();
+            const nameError = document.getElementById('nameError');
+            
+            if (name === '') {
+                showError(nameInput, nameError);
+                return false;
+            } else {
+                hideError(nameInput, nameError);
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const email = emailInput.value.trim();
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                showError(emailInput, emailError);
+                return false;
+            } else {
+                hideError(emailInput, emailError);
+                return true;
+            }
+        }
+
+        function validateAge() {
+            const age = parseInt(ageInput.value);
+            const ageError = document.getElementById('ageError');
+            
+            if (isNaN(age) || age < 18 || age > 60) {
+                showError(ageInput, ageError);
+                return false;
+            } else {
+                hideError(ageInput, ageError);
+                return true;
+            }
+        }
+
+        function validatePhone() {
+            const phone = phoneInput.value.trim();
+            const phoneError = document.getElementById('phoneError');
+            const phoneRegex = /^\d{10}$/;
+            
+            if (!phoneRegex.test(phone)) {
+                showError(phoneInput, phoneError);
+                return false;
+            } else {
+                hideError(phoneInput, phoneError);
+                return true;
+            }
+        }
+
+        function validateDepartment() {
+            const department = departmentSelect.value;
+            const departmentError = document.getElementById('departmentError');
+            
+            if (department === '') {
+                showError(departmentSelect, departmentError);
+                return false;
+            } else {
+                hideError(departmentSelect, departmentError);
+                return true;
+            }
+        }
+
+        // Helper functions to show/hide errors
+        function showError(input, errorElement) {
+            input.classList.add('input-error');
+            errorElement.classList.add('show');
+        }
+
+        function hideError(input, errorElement) {
+            input.classList.remove('input-error');
+            errorElement.classList.remove('show');
+        }
+
+        // Event listeners for real-time validation (onblur)
+        nameInput.addEventListener('blur', validateName);
+        emailInput.addEventListener('blur', validateEmail);
+        ageInput.addEventListener('blur', validateAge);
+        phoneInput.addEventListener('blur', validatePhone);
+        departmentSelect.addEventListener('blur', validateDepartment);
+
+        // Form submission event handler (onsubmit)
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Validate all fields
+            const isNameValid = validateName();
+            const isEmailValid = validateEmail();
+            const isAgeValid = validateAge();
+            const isPhoneValid = validatePhone();
+            const isDepartmentValid = validateDepartment();
+            
+            // Check if all validations pass
+            if (isNameValid && isEmailValid && isAgeValid && isPhoneValid && isDepartmentValid) {
+                // All validations passed - show success message
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // In a real application, you would submit the form data to a server here
+                console.log('Form submitted successfully with data:', {
+                    name: nameInput.value,
+                    email: emailInput.value,
+                    age: ageInput.value,
+                    phone: phoneInput.value,
+                    department: departmentSelect.value
+                });
+            } else {
+                // Some validations failed - prevent submission
+                console.log('Form submission prevented due to validation errors');
+            }
+        });
+
+        // Optional: Real-time validation on input (oninput)
+        nameInput.addEventListener('input', function() {
+            if (nameInput.value.trim() !== '') {
+                hideError(nameInput, document.getElementById('nameError'));
+            }
+        });
+
+        phoneInput.addEventListener('input', function() {
+            // Only allow numeric input
+            phoneInput.value = phoneInput.value.replace(/\D/g, '');
+            if (phoneInput.value.length === 10) {
+                validatePhone();
+            }
+        });
+    </script>
+</body>
+</html>

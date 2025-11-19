@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Task Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 15px 0;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#output {
+  background: #fafafa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  border-radius: 5px;
+  min-height: 50px;
+  font-size: 14px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #283845, #1e2a33);
+  color: #F2D492;
+}
+
+body.dark-mode .container {
+  background: linear-gradient(135deg, #606c38, #4a5429);
+  color: #fff;
+  border: 2px solid #bc6c25;
+}
+
+body.dark-mode input {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #bc6c25;
+  color: #F2D492;
+}
+
+body.dark-mode button {
+  background: linear-gradient(45deg, #bc6c25, #d3943a);
+}
+
+body.dark-mode #output {
+  background: rgba(40, 56, 69, 0.3);
+  border-color: #bc6c25;
+  color: #F2D492;
+}
+
+  </style>
+</head>
+<body>
+  <button id="themeToggle" class="btn btn-outline-secondary position-fixed" style="top: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">🌙</button>
+
+  <div class="container">
+
+    <h2>Student Task Manager</h2>
+
+    <div class="form-grid">
+      <input type="number" id="id" placeholder="Student ID">
+      <input type="text" id="name" placeholder="Student Name">
+      <input type="text" id="course" placeholder="Course">
+    </div>
+
+    <div class="btn-grid">
+      <button onclick="addStudent()">Add</button>
+      <button onclick="updateStudent()">Update</button>
+      <button onclick="deleteStudent()">Delete</button>
+      <button onclick="showStudents()">Show All</button>
+    </div>
+
+    <h3>Student List</h3>
+    <div id="output"></div>
+
+  </div>
+
+  <script>
+    let students = []; // empty list to store student objects
+
+function addStudent() {
+  const id = document.getElementById("id").value;
+  const name = document.getElementById("name").value;
+  const course = document.getElementById("course").value;
+
+  if (!id || !name || !course) {
+    alert("All fields required!");
+    return;
+  }
+
+  students.push({ id: Number(id), name, course });
+  alert("Student added!");
+}
+
+function updateStudent() {
+  const id = Number(document.getElementById("id").value);
+
+  let student = students.find(s => s.id === id);
+
+  if (!student) {
+    alert("Student not found!");
+    return;
+  }
+
+  student.name = document.getElementById("name").value || student.name;
+  student.course = document.getElementById("course").value || student.course;
+
+  alert("Student updated!");
+}
+
+function deleteStudent() {
+  const id = Number(document.getElementById("id").value);
+
+  students = students.filter(s => s.id !== id);
+
+  alert("Student deleted (if existed)!");
+}
+
+function showStudents() {
+  const output = document.getElementById("output");
+
+  if (students.length === 0) {
+    output.innerHTML = "No records available.";
+    return;
+  }
+
+  output.innerHTML = students
+    .map(s => `ID: ${s.id} | Name: ${s.name} | Course: ${s.course}`)
+    .join("<br>");
+}
+
+  </script>
+  <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            this.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
